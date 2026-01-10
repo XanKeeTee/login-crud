@@ -25,7 +25,7 @@ Este es un sistema web sencillo para la gestión académica de alumnos, desarrol
 ## 📋 Requisitos Previos
 
 Para ejecutar este proyecto necesitas un entorno de servidor local como:
-* **XAMPP** (Recomendado para Windows)
+* **XAMPP**
 
 ## 🔧 Instalación y Configuración
 
