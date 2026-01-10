@@ -26,15 +26,13 @@ Este es un sistema web sencillo para la gestión académica de alumnos, desarrol
 
 Para ejecutar este proyecto necesitas un entorno de servidor local como:
 * **XAMPP** (Recomendado para Windows)
-* **MAMP** (Mac)
-* **LAMP** Stack (Linux)
 
 ## 🔧 Instalación y Configuración
 
 Sigue estos pasos para poner en marcha el proyecto:
 
 ### 1. Clonar o Descargar
-Descarga este repositorio en tu carpeta de servidor web (por ejemplo, `C:\xampp\htdocs\gestion-alumnos`).
+Descarga este repositorio en tu carpeta de servidor web (por ejemplo, `C:\xampp\htdocs\`).
 
 ### 2. Base de Datos
 1.  Abre tu gestor de base de datos (phpMyAdmin, Workbench, etc.).
