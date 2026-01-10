@@ -38,8 +38,7 @@ Descarga este repositorio en tu carpeta de servidor web (por ejemplo, `C:\xampp\
 
 ### 2. Base de Datos
 1.  Abre tu gestor de base de datos (phpMyAdmin, Workbench, etc.).
-2.  Importa el archivo **`database.sql`** (o `esquema.sql`) que se incluye en este proyecto.
-    * *Nota:* El script creará automáticamente la base de datos `login-php` y la tabla necesaria.
+2.  Importa el archivo **`login-php.sql` **que se incluye en este proyecto.
 
 ### 3. Configuración de Conexión
 Verifica que las credenciales de tu base de datos coincidan en el archivo `config/Database.php`. Por defecto está configurado para XAMPP:
@@ -48,4 +47,4 @@ Verifica que las credenciales de tu base de datos coincidan en el archivo `confi
 private $host = "localhost";
 private $db_name = "login-php";
 private $username = "root";
-private $password = ""; // Dejar vacío en XAMPP
+private $password = "";
