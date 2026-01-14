@@ -72,12 +72,12 @@
                 <table class="table table-striped table-hover mb-0">
                     <thead class="table-dark">
                         <tr>
-                            <th>Num Alumno</th>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Email</th>
-                            <th>Fecha Nacimiento</th>
-                            <th>Repite</th>
+                            <th onclick="ordenarTabla(0)" style="cursor: pointer;">Num Alumno ↕</th>
+                            <th onclick="ordenarTabla(1)" style="cursor: pointer;">Nombre ↕</th>
+                            <th onclick="ordenarTabla(2)" style="cursor: pointer;">Apellidos ↕</th>
+                            <th onclick="ordenarTabla(3)" style="cursor: pointer;">Email ↕</th>
+                            <th onclick="ordenarTabla(4)" style="cursor: pointer;">Fecha Nacimiento ↕</th>
+                            <th onclick="ordenarTabla(5)" style="cursor: pointer;">Repite ↕</th>
                             <th class="text-center">Acciones</th>
                         </tr>
                     </thead>
@@ -134,6 +134,59 @@
             });
         });
     </script>
+    <!-- Script para ordenar -->
+    <script>
+        function ordenarTabla(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.querySelector("table");
+            switching = true;
+            dir = "asc";
+
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+
+
+                    var xContent = x.textContent.toLowerCase();
+                    var yContent = y.textContent.toLowerCase();
+
+                    var xNum = parseFloat(xContent);
+                    var yNum = parseFloat(yContent);
+
+                    var esNumero = !isNaN(xNum) && !isNaN(yNum);
+
+                    if (dir == "asc") {
+                        if (esNumero ? xNum > yNum : xContent > yContent) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (esNumero ? xNum < yNum : xContent < yContent) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
+    </script
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
