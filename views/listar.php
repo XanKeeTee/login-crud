@@ -19,6 +19,16 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item d-flex align-items-center me-3">
+                        <button class="btn btn-link text-white text-decoration-none p-0 me-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#buscadorCollapse" aria-expanded="false" aria-controls="buscadorCollapse" title="Buscar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                        <div class="collapse collapse-horizontal" id="buscadorCollapse">
+                            <input type="text" id="buscadorEnVivo" class="form-control form-control-sm" placeholder="Buscar..." style="width: 180px;">
+                        </div>
+                    </li>
                     <li class="nav-item me-3">
                         <span class="navbar-text text-white">
                             Hola, <strong>
@@ -97,7 +107,33 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const inputBuscador = document.getElementById('buscadorEnVivo');
+            const filasTabla = document.querySelectorAll('tbody tr');
 
+            inputBuscador.addEventListener('keyup', function(e) {
+                const texto = e.target.value.toLowerCase();
+
+                filasTabla.forEach(function(fila) {
+                    const nombre = fila.children[1].textContent.toLowerCase();
+                    const apellidos = fila.children[2].textContent.toLowerCase();
+                    const email = fila.children[3].textContent.toLowerCase();
+
+                    if (nombre.includes(texto) || apellidos.includes(texto) || email.includes(texto)) {
+                        fila.style.display = '';
+                    } else {
+                        fila.style.display = 'none';
+                    }
+                });
+            });
+
+            const buscadorCollapse = document.getElementById('buscadorCollapse');
+            buscadorCollapse.addEventListener('shown.bs.collapse', function() {
+                inputBuscador.focus();
+            });
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
