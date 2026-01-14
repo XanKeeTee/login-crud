@@ -134,6 +134,7 @@
             });
         });
     </script>
+    
     <!-- Script para ordenar -->
     <script>
         function ordenarTabla(n) {
@@ -152,24 +153,40 @@
                     x = rows[i].getElementsByTagName("TD")[n];
                     y = rows[i + 1].getElementsByTagName("TD")[n];
 
-
-                    var xContent = x.textContent.toLowerCase();
-                    var yContent = y.textContent.toLowerCase();
+                    var xContent = x.textContent.trim();
+                    var yContent = y.textContent.trim();
 
                     var xNum = parseFloat(xContent);
                     var yNum = parseFloat(yContent);
-
                     var esNumero = !isNaN(xNum) && !isNaN(yNum);
 
                     if (dir == "asc") {
-                        if (esNumero ? xNum > yNum : xContent > yContent) {
-                            shouldSwitch = true;
-                            break;
+                        if (esNumero) {
+                            if (xNum > yNum) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (xContent.localeCompare(yContent, 'es', {
+                                    sensitivity: 'base'
+                                }) > 0) {
+                                shouldSwitch = true;
+                                break;
+                            }
                         }
                     } else if (dir == "desc") {
-                        if (esNumero ? xNum < yNum : xContent < yContent) {
-                            shouldSwitch = true;
-                            break;
+                        if (esNumero) {
+                            if (xNum < yNum) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (xContent.localeCompare(yContent, 'es', {
+                                    sensitivity: 'base'
+                                }) < 0) {
+                                shouldSwitch = true;
+                                break;
+                            }
                         }
                     }
                 }
@@ -186,7 +203,7 @@
                 }
             }
         }
-    </script
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
