@@ -47,6 +47,6 @@ El usuario y contraseña para poder acceder son:
 <br>Contraseña: 1234
 ```php
 private $host = "localhost";
-private $db_name = "login-php";
+private $db_name = "login-php-gambero";
 private $username = "root";
 private $password = "";
