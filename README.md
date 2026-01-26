@@ -36,7 +36,8 @@ Descarga este repositorio en tu carpeta de servidor web (por ejemplo, `C:\xampp\
 
 ### 2. Base de Datos
 1.  Abre tu gestor de base de datos (phpMyAdmin, Workbench, etc.).
-2.  Importa el archivo **`login-php.sql` **que se incluye en este proyecto.
+2.  Crea una base de datos con el nombre 'login-php-gambero'
+3.  Importa el archivo **`login-php-gambero.sql` **que se incluye en este proyecto.
 
 ### 3. Configuración de Conexión
 Verifica que las credenciales de tu base de datos coincidan en el archivo `config/Database.php`. Por defecto está configurado para XAMPP:
