@@ -2,7 +2,7 @@
 class Database
 {
     private $host = "localhost";
-    private $db_name = "login-php";
+    private $db_name = "login-php-gambero";
     private $username = "root";
     private $password = "";
     public $conn;
