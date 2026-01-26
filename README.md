@@ -43,8 +43,8 @@ Verifica que las credenciales de tu base de datos coincidan en el archivo `confi
 
 ### 4.Usuario y contraseña
 El usuario y contraseña para poder acceder son:
-   Usuario: admin
-   Contraseña: 1234
+<br>Usuario: admin
+<br>Contraseña: 1234
 ```php
 private $host = "localhost";
 private $db_name = "login-php";
