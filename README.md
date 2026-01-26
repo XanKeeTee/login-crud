@@ -41,6 +41,10 @@ Descarga este repositorio en tu carpeta de servidor web (por ejemplo, `C:\xampp\
 ### 3. Configuración de Conexión
 Verifica que las credenciales de tu base de datos coincidan en el archivo `config/Database.php`. Por defecto está configurado para XAMPP:
 
+### 4.Usuario y contraseña
+El usuario y contraseña para poder acceder son:
+   Usuario: admin
+   Contraseña: 1234
 ```php
 private $host = "localhost";
 private $db_name = "login-php";
