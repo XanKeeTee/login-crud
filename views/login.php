@@ -33,8 +33,8 @@
         
         <div class="mt-4 text-center">
             <p class="text-muted small mb-0">Credenciales por defecto:</p>
-            <span class="badge bg-white text-dark border">admin</span>
-            <span class="badge bg-white text-dark border">1234</span>
+            <span class="badge bg-white text-dark border">Usuario: admin</span>
+            <span class="badge bg-white text-dark border">Contraseña: 1234</span>
         </div>
     </div>
 
