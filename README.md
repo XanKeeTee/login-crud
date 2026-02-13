@@ -53,4 +53,4 @@ private $username = "root";
 private $password = "";
 ```
 
-<img src="./screenshots/image1.png">
+<img src="/screenshoots/image1.png">
