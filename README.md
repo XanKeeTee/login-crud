@@ -51,3 +51,6 @@ private $host = "localhost";
 private $db_name = "login-php-gambero";
 private $username = "root";
 private $password = "";
+```
+
+<img src="./screenshot/image1.png">
