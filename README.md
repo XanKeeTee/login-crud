@@ -55,11 +55,11 @@ private $password = "";
 
 ### 5.Caputas de pantalla
 1.Login
-<img aling="center" src="/screenshoots/image1.png">
+<img align="center" src="/screenshoots/image1.png">
 2.Crud con los alumnos
-<img aling="center" src="/screenshoots/image2.png">
+<img align="center" src="/screenshoots/image2.png">
 3.Editar perfil
-<img aling="center" src="/screenshoots/image3.png">
+<img align="center" src="/screenshoots/image3.png">
 4.Crear un alumno
-<img aling="center" src="/screenshoots/image4.png">
+<img align="center" src="/screenshoots/image4.png">
 
