@@ -54,12 +54,16 @@ private $password = "";
 ```
 
 ### 5.Caputas de pantalla
+
 1.Login
 <img align="center" src="/screenshoots/image1.png">
+<br>
 2.Crud con los alumnos
 <img align="center" src="/screenshoots/image2.png">
+<br>
 3.Editar perfil
 <img align="center" src="/screenshoots/image3.png">
+<br>
 4.Crear un alumno
 <img align="center" src="/screenshoots/image4.png">
-
+<br>
